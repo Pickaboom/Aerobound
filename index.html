@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,23 +19,39 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="">
+<body class="is-loading">
   <!-- ============================================================
        LOADING SCREEN
        Edit the words here. Timing is controlled near the top of
        assets/js/script.js and the colours are in assets/css/style.css.
   ============================================================= -->
-  
+  <div class="loader" data-loader aria-label="Loading AEROBOUND">
+    <div class="loader-noise"></div>
 
-  <!-- ============================================================
-       TOP NAVIGATION
-       Replace the social links with your real links.
-  ============================================================= -->
+    <div class="loader-stage loader-stage-one">
+      <p class="loader-kicker">STEP BEYOND</p>
+      <h2 class="loader-message">
+        <span>MOVE.</span>
+        <span>EXPLORE.</span>
+        <span class="accent-text">AEROBOUND.</span>
+      </h2>
+      <div class="loader-line"><span></span></div>
+    </div>
+
+    <div class="loader-stage loader-stage-two">
+      <img src="assets/images/logo.png" alt="" class="loader-logo">
+      <div class="loader-name">AERO<span>BOUND</span></div>
+      <p class="loader-status">ENTERING THE WORLD</p>
+    </div>
+
+    <button class="loader-skip" type="button" data-loader-skip>Skip intro</button>
+  </div>
+
   <header class="nav">
     <div class="nav-inner">
       <a class="brand" href="./">
@@ -55,9 +73,9 @@
           </a>
         </div>
 
-        <button class="menu-btn" data-menu="" type="button">Menu</button>
+        <button class="menu-btn" data-menu type="button">Menu</button>
 
-        <nav class="nav-links open" aria-label="Main navigation">
+        <nav class="nav-links" aria-label="Main navigation">
           <a class="btn small ghost" href="#about">About</a>
           <a class="btn small ghost" href="support/">Support</a>
           <a class="btn small ghost" href="privacy/">Privacy</a>
@@ -195,7 +213,7 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <div>© <span data-year="">2026</span> AEROBOUND. All rights reserved.</div>
+      <div>© <span data-year></span> AEROBOUND. All rights reserved.</div>
       <div>
         <a href="support/">Support</a> ·
         <a href="privacy/">Privacy</a> ·
@@ -205,6 +223,5 @@
   </footer>
 
   <script src="assets/js/script.js"></script>
-
-
-</body></html>
+</body>
+</html>
